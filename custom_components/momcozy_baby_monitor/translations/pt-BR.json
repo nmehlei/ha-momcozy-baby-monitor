@@ -1,0 +1,102 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Conta Momcozy",
+        "description": "Entre com a conta Momcozy à qual o BM04 pertence. A configuração identifica câmeras compatíveis sem abrir a sessão de vídeo.",
+        "data": {
+          "email": "E-mail",
+          "password": "Senha",
+          "country_code": "Código do país",
+          "region": "Região"
+        },
+        "data_description": {
+          "country_code": "Use o código de país de duas letras configurado na Momcozy (por exemplo, BR).",
+          "region": "O data center da Tuya em que a conta vive."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Entrar novamente",
+        "description": "A Momcozy rejeitou as credenciais salvas. As câmeras já configuradas são mantidas.",
+        "data": {
+          "email": "E-mail",
+          "password": "Senha",
+          "country_code": "Código do país",
+          "region": "Região"
+        }
+      },
+      "reconfigure": {
+        "title": "Conta Momcozy",
+        "description": "Atualize a conta e refaça a lista de câmeras que ela expõe.",
+        "data": {
+          "email": "E-mail",
+          "password": "Senha",
+          "country_code": "Código do país",
+          "region": "Região"
+        }
+      }
+    },
+    "error": {
+      "auth": "O e-mail, a senha, o código do país ou a região está errado.",
+      "connection": "Não foi possível acessar o serviço da conta.",
+      "no_cameras": "Nenhum Momcozy BM04 compatível foi encontrado nesta conta.",
+      "unknown": "Erro inesperado."
+    },
+    "abort": {
+      "already_configured": "Esta conta já está configurada.",
+      "reauth_successful": "A reautenticação foi concluída.",
+      "reconfigure_successful": "A conta foi atualizada.",
+      "unique_id_mismatch": "As credenciais pertencem a outra conta."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções",
+        "data": {
+          "keep_connected": "Manter conectado",
+          "wake_on_snapshot": "Conectar para capturas",
+          "motion_sensitivity": "Sensibilidade de movimento",
+          "scan_interval": "Intervalo de atualização"
+        },
+        "data_description": {
+          "keep_connected": "Mantém a sessão da câmera aberta para que o vídeo e as fotos estejam prontos na hora. O BM04 atende um cliente por vez, então, enquanto isto estiver ligado, o app da Momcozy não consegue se conectar. Desligue para compartilhar a câmera: a sessão passa a subir sob demanda e é liberada um minuto depois que o último espectador sai.",
+          "wake_on_snapshot": "Permite que solicitações de captura e miniatura conectem uma câmera inativa. Deixe desativado para impedir que painéis do Home Assistant ocupem a sessão usada pelo aplicativo Momcozy.",
+          "motion_sensitivity": "O quanto um quadro precisa diferir do anterior para contar como movimento, como um múltiplo da diferença que esta câmera apresenta quando nada acontece. Valores menores detectam mais e geram mais alarmes falsos.",
+          "scan_interval": "Com que frequência a conta é consultada em busca de nomes, disponibilidade e chaves locais rotacionadas das câmeras. Não afeta o vídeo, que é enviado pela própria câmera."
+        }
+      }
+    }
+  },
+  "selector": {
+    "region": {
+      "options": {
+        "us": "Estados Unidos",
+        "eu": "Europa",
+        "cn": "China",
+        "in": "Índia"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "retry": {
+        "name": "Tentar conexão novamente"
+      },
+      "release": {
+        "name": "Liberar sessão"
+      }
+    },
+    "binary_sensor": {
+      "motion": {
+        "name": "Movimento"
+      }
+    }
+  },
+  "issues": {
+    "needs_power_cycle": {
+      "title": "{camera} parou de responder e precisa ser reiniciada na tomada",
+      "description": "`{camera}` está recusando toda conexão com a resposta de \"ocupada\", o que essas câmeras passam a fazer depois de uma sequência de tentativas falhas — e passam a fazer para qualquer cliente: o app da Momcozy também não carrega a imagem. Nada que o Home Assistant faça resolve: tire a câmera da tomada por alguns segundos e ligue de novo. O Home Assistant já reduziu o ritmo das tentativas, e este aviso some sozinho assim que a câmera voltar a transmitir."
+    }
+  }
+}

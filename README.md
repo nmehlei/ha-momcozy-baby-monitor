@@ -96,4 +96,3 @@ Security reports should follow [`SECURITY.md`](SECURITY.md).
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-

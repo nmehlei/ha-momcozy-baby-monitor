@@ -1,0 +1,7 @@
+{
+    "name": "Momcozy Baby Monitor",
+    "zip_release": true,
+    "filename": "momcozy_baby_monitor.zip",
+    "homeassistant": "2026.8.2",
+    "hacs": "2.0.5"
+}

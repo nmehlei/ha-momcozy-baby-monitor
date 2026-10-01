@@ -1,0 +1,14 @@
+Momcozy Baby Monitor for Home Assistant
+
+This project is derived from ha-tuya-ipc-p2p by Rodrigo Roque:
+https://github.com/roquerodrigo/ha-tuya-ipc-p2p
+
+The upstream project is licensed under the MIT License. Its original copyright
+notice and license are retained in LICENSE. This downstream project contains
+substantial original modifications for Momcozy authentication, BM04 discovery,
+session sharing, recovery controls and Momcozy-specific Home Assistant setup.
+
+Momcozy and BM04 are trademarks of their respective owners. Tuya is a
+trademark of its respective owner. These names are used only to describe
+interoperability and compatible hardware. No vendor binaries, decompiled
+source, artwork or user credentials are distributed.

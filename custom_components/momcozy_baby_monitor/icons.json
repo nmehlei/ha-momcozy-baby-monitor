@@ -1,0 +1,20 @@
+{
+  "entity": {
+    "button": {
+      "retry": {
+        "default": "mdi:restart"
+      },
+      "release": {
+        "default": "mdi:connection"
+      }
+    },
+    "binary_sensor": {
+      "motion": {
+        "default": "mdi:motion-sensor-off",
+        "state": {
+          "on": "mdi:motion-sensor"
+        }
+      }
+    }
+  }
+}

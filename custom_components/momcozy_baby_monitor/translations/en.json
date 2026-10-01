@@ -1,0 +1,102 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Momcozy account",
+        "description": "Sign in with the Momcozy account that owns the BM04. Setup identifies compatible cameras without opening their video session.",
+        "data": {
+          "email": "Email",
+          "password": "Password",
+          "country_code": "Country code",
+          "region": "Region"
+        },
+        "data_description": {
+          "country_code": "Use the two-letter country code configured in Momcozy (for example DE).",
+          "region": "The Tuya data centre the account lives in."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sign in again",
+        "description": "Momcozy rejected the stored credentials. The cameras already configured are kept.",
+        "data": {
+          "email": "Email",
+          "password": "Password",
+          "country_code": "Country code",
+          "region": "Region"
+        }
+      },
+      "reconfigure": {
+        "title": "Momcozy account",
+        "description": "Update the account and refresh the list of cameras it exposes.",
+        "data": {
+          "email": "Email",
+          "password": "Password",
+          "country_code": "Country code",
+          "region": "Region"
+        }
+      }
+    },
+    "error": {
+      "auth": "The email, password, country code or region is wrong.",
+      "connection": "Could not reach the account service.",
+      "no_cameras": "No supported Momcozy BM04 was found on this account.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Re-authentication was successful.",
+      "reconfigure_successful": "The account was updated.",
+      "unique_id_mismatch": "The credentials belong to a different account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "keep_connected": "Keep connected",
+          "wake_on_snapshot": "Wake for snapshots",
+          "motion_sensitivity": "Motion sensitivity",
+          "scan_interval": "Scan interval"
+        },
+        "data_description": {
+          "keep_connected": "Hold the camera session open so video and snapshots are ready instantly. The BM04 serves one client at a time, so while this is on the Momcozy app cannot connect. Turn it off to share the camera: the session then starts on demand and is released a minute after the last viewer leaves.",
+          "wake_on_snapshot": "Allow snapshot and thumbnail requests to connect to a cold camera. Leave this off to prevent Home Assistant dashboards from taking the camera session away from the Momcozy app.",
+          "motion_sensitivity": "How much a frame has to differ from the one before it to count as motion, as a multiple of the difference this camera shows when nothing is happening. Lower catches more and reports more false alarms.",
+          "scan_interval": "How often the account is polled for camera names, availability and rotated local keys. It does not affect the video, which is pushed."
+        }
+      }
+    }
+  },
+  "selector": {
+    "region": {
+      "options": {
+        "us": "United States",
+        "eu": "Europe",
+        "cn": "China",
+        "in": "India"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "retry": {
+        "name": "Retry connection"
+      },
+      "release": {
+        "name": "Release session"
+      }
+    },
+    "binary_sensor": {
+      "motion": {
+        "name": "Motion"
+      }
+    }
+  },
+  "issues": {
+    "needs_power_cycle": {
+      "title": "{camera} has stopped answering and needs to be power cycled",
+      "description": "`{camera}` is turning down every connection with its \"busy\" reply, which these cameras do after a run of failed attempts and keep doing for every client — the Momcozy app cannot load the picture either. Nothing Home Assistant can do clears it: unplug the camera for a few seconds and plug it back in. Home Assistant is now retrying it slowly, and this notice disappears on its own once the camera streams again."
+    }
+  }
+}

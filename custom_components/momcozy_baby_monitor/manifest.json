@@ -1,0 +1,21 @@
+{
+  "domain": "momcozy_baby_monitor",
+  "name": "Momcozy Baby Monitor",
+  "codeowners": [
+    "@nmehlei"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "camera",
+    "ffmpeg"
+  ],
+  "documentation": "https://github.com/nmehlei/ha-momcozy-baby-monitor",
+  "integration_type": "hub",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/nmehlei/ha-momcozy-baby-monitor/issues",
+  "requirements": [
+    "aiomqtt==2.5.1",
+    "tuya-ipc-p2p-sdk @ git+https://github.com/nmehlei/tuya-ipc-p2p-sdk.git@ad6a1cb48ad776988a7aff7efc837da8d5b70cd7"
+  ],
+  "version": "0.1.0"
+}

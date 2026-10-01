@@ -1,0 +1,30 @@
+# artifacts
+__pycache__
+.pytest*
+*.egg-info
+*/build/*
+*/dist/*
+
+
+# misc
+.coverage
+.DS_Store
+.vscode
+coverage.xml
+.ruff_cache
+.mypy_cache
+
+
+# venv / env
+.venv
+.env
+.tools/
+
+# Local development copy only. Published builds install the SDK package and
+# never bundle research or reverse-engineering inputs.
+custom_components/momcozy_baby_monitor/vendor/
+
+
+# Home Assistant configuration
+config/*
+!config/configuration.yaml
