@@ -131,7 +131,7 @@ async def test_a_camera_the_account_reports_offline_is_unavailable(
 
 
 async def test_on_demand_starts_the_session_only_when_something_asks(
-    hass, mock_api_client, streams, enable_custom_integrations
+    hass, mock_api_client, streams, enable_custom_integrations, socket_enabled
 ):
     entry = MockConfigEntry(
         domain=DOMAIN,
@@ -153,7 +153,7 @@ async def test_on_demand_starts_the_session_only_when_something_asks(
 
 
 async def test_on_demand_releases_the_session_once_nobody_is_watching(
-    hass, mock_api_client, streams, enable_custom_integrations
+    hass, mock_api_client, streams, enable_custom_integrations, socket_enabled
 ):
     entry = MockConfigEntry(
         domain=DOMAIN,
@@ -190,7 +190,7 @@ async def test_keep_connected_never_schedules_an_idle_shutdown(
 
 
 async def test_a_viewer_still_watching_defers_the_idle_shutdown(
-    hass, mock_api_client, streams, enable_custom_integrations
+    hass, mock_api_client, streams, enable_custom_integrations, socket_enabled
 ):
     entry = MockConfigEntry(
         domain=DOMAIN,
