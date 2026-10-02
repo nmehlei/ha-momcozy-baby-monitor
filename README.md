@@ -25,9 +25,22 @@ Each BM04 becomes one Home Assistant device with:
 
 ## Installation
 
-This repository is not published yet. Once released, install it through HACS
-as a custom integration repository, restart Home Assistant, then add
-**Momcozy Baby Monitor** under **Settings → Devices & services**.
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=nmehlei&repository=ha-momcozy-baby-monitor&category=integration)
+
+Install with HACS:
+
+1. Open the button above, or add
+   `https://github.com/nmehlei/ha-momcozy-baby-monitor` as a custom HACS
+   repository of type **Integration**.
+2. Install **Momcozy Baby Monitor** in HACS.
+3. Restart Home Assistant.
+4. Under **Settings → Devices & services**, select **Add integration** and
+   choose **Momcozy Baby Monitor**.
+
+The current release pins the companion SDK to an immutable commit in the
+maintainer's public fork while its upstream pull request is under review.
+Home Assistant therefore installs the exact SDK revision tested by this
+project rather than following a moving branch.
 
 ## Configuration
 
