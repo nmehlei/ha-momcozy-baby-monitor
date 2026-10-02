@@ -109,4 +109,5 @@ max-complexity = 25
     "PLR0917",  # same, counted as positional parameters
     "ASYNC110", # polling a real process is what the scenario is testing
     "ASYNC240", # a test reads its fixtures off the filesystem directly
+    "S603",     # subprocesses invoke repository-owned test scripts
 ]

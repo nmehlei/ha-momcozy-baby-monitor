@@ -17,11 +17,9 @@ jobs:
           cd custom_components/momcozy_baby_monitor
           zip -r ../../momcozy_baby_monitor.zip . \
             -x '*/__pycache__/*' '*.pyc' 'vendor/*'
-      - name: Create GitHub release
+      - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
-          gh release create "${GITHUB_REF_NAME}"
+          python scripts/publish_release.py "${GITHUB_REF_NAME}"
           momcozy_baby_monitor.zip
-          --generate-notes
-          --verify-tag
