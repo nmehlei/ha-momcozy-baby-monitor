@@ -9,9 +9,7 @@ MANIFEST = ROOT / "custom_components" / "momcozy_baby_monitor" / "manifest.json"
 SDK_PACKAGE = "tuya-ipc-p2p-sdk"
 SDK_COMMIT = "ad6a1cb48ad776988a7aff7efc837da8d5b70cd7"
 SDK_REQUIREMENT = (
-    "tuya-ipc-p2p-sdk @ "
-    "git+https://github.com/nmehlei/tuya-ipc-p2p-sdk.git@"
-    f"{SDK_COMMIT}"
+    f"tuya-ipc-p2p-sdk@git+https://github.com/nmehlei/tuya-ipc-p2p-sdk.git@{SDK_COMMIT}"
 )
 
 
