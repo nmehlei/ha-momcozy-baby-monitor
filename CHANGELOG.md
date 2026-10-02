@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 - 2026-10-03
+
+### Fixes
+
+- publish the HACS archive when a GitHub release already exists
+
 ## 0.1.0 - 2026-10-02
 
 ### Features
@@ -16,3 +22,4 @@
 - redact account credentials and local keys from diagnostics
 - prevent dashboard thumbnails from taking an idle camera session by default
 - document cloud relay use, credential storage and monitoring limitations
+
