@@ -25,7 +25,7 @@ dev = [
     "tuya-ipc-p2p-sdk@git+https://github.com/nmehlei/tuya-ipc-p2p-sdk.git@ad6a1cb48ad776988a7aff7efc837da8d5b70cd7",
 ]
 lint = [
-    "ruff==0.16.7",
+    "ruff==0.16.9",
     "mypy==2.3.1",
 ]
 
