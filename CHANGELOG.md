@@ -22,4 +22,3 @@
 - redact account credentials and local keys from diagnostics
 - prevent dashboard thumbnails from taking an idle camera session by default
 - document cloud relay use, credential storage and monitoring limitations
-
