@@ -5,6 +5,7 @@
 ### Fixes
 
 - publish the HACS archive when a GitHub release already exists
+- preserve immutable release tags when retrying publication
 
 ## 0.1.0 - 2026-10-02
 
