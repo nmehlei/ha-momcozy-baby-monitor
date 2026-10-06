@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 - 2026-10-06
+
+### Brand and documentation
+
+- replace the shared Tuya artwork with an original monitor-and-heart identity
+- add native Home Assistant icon and logo assets at every supported size
+- redesign the README around a fast HACS setup and practical recovery guidance
+
 ## 0.1.1 - 2026-10-03
 
 ### Fixes
